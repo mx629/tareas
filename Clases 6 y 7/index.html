@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Tarea 6 y 7" />
+    <meta name="keywords" content="Tarea 6 y 7" />
+    <meta name="author" content="629" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" src="scripts.js"></script>
+    <title>Tarea 6 y 7</title>
+  </head>
+  <body>
+    <h1>USUARIOS</h1>
+    <form action="https://619464c99b1e780017ca1f39.mockapi.io/Subscriptions" method="GET">
+      <h2>Buscar</h2>
+      <input type="text" minlength="4" name="name" placeholder="Ingrese nombre u apellido" required />
+      <input type="email" name="email" placeholder="Ingrese correo electrónico"  />
+      <input type="fecha" minlength="1" maxlength="2" name="id" placeholder="Ingrese número de ID" />
+      <button type="submit">Buscar usuario</button>
+      <button type="reset">Borrar</button>
+    </form>
+
+    <form action="https://619464c99b1e780017ca1f39.mockapi.io/Subscriptions" method="GET">
+      <h2>Lista completa</h2>
+      <button type="submit">Obtener Lista de Usuarios</button>
+    </form>
+
+    <form action="https://619464c99b1e780017ca1f39.mockapi.io/Subscriptions" method="POST">
+      <h2>Crear usuario</h2>
+      <input type="text" name="name"  placeholder="Ingrese nombre" required/>
+      <input type="email" name="email"  placeholder="Ingrese email" required/>
+      <button type="submit">Crear</button>
+      <button type="reset">Borrar</button>
+    </form>
+  </body>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <input type="checkbox" id="nav-check" />
+    <nav id="main-nav" aria-label="Primary navigation">
+        <ul>
+            <li><a class="botonazo" href="#">Link 1</a></li>
+            <li><a class="botonazo" href="#">Link 2</a></li>
+            <li><a class="botonazo" href="#">Link 3</a></li>
+            <li><a class="botonazo" href="#">Link 4</a></li>
+            <li><a class="botonazo" href="#">Link 5</a></li>
+            <li>
+                <button class="botonazo" type="button">
+                    <label for="nav-check">
+                        <span>Volver</span>
+                    </label>
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
+        <button type="button">
+            <label for="nav-check">
+                <i class="fas fa-bars"></i>
+            </label>
+        </button>
+        <h1>Mi pagina</h1>
+        <button type="button">
+            <label for="open-modal-checkbox">
+                Abrir Modal
+            </label>
+        </button>
+
+        <input type="checkbox" id="open-modal-checkbox" />
+        <div class="overlay"></div>
+        <section id="modal">
+            <header class="modal-header">
+                <h2 class="modal-header--title">Terms & Conditions</h2>
+                <button class="modal-header--top-button modal-header--cuadradit mobile-hidden" type="button">◰</button>
+                <button class="modal-header--top-button modal-header--close" type="button">
+                    <label for="open-modal-checkbox">X</label>
+                </button>
+            </header>
+            <article class="modal-content">
+                <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the <a href="#">http://www.mywebsite.com</a> website and the My Mobile App (change this) mobile application (the "Service") operated by My Company (change this) ("us", "we", or "our").</p>
+                <p>Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.</p>
+                <p><strong>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service.</strong></p>
+            </article>
+        </section>
+        <section class="lorem">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem perspiciatis, cumque nobis recusandae atque maiores adipisci assumenda consectetur corrupti enim quod dicta sapiente reiciendis minima beatae, repellat facere nam odit.</p>
+            <p class="visibility-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quasi blanditiis molestias sequi nisi atque perferendis quis est voluptatibus optio, inventore, corporis officiis! Id totam fuga deleniti quisquam. Iste, saepe?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi commodi laboriosam adipisci inventore ratione quis alias sequi, quo corrupti earum ea dicta ipsam rerum, obcaecati repellat eligendi deleniti tenetur sapiente.</p>
+        </section>
+    </main>
+</body>
+</html>

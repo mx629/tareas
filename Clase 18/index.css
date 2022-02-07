@@ -1,0 +1,164 @@
+body {
+    background-color: teal;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+li {
+    margin-bottom: 40px;
+}
+.botonazo {
+    display:inline-block;
+    border: rgba(133, 253, 183, 1) 2px solid;
+    background-color: rgba(133, 253, 183, 0.2);
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: rgb(46, 109, 72);
+}
+.botonazo:hover {
+    color: white;
+    background-color: rgb(77, 146, 106);
+    transition-duration: 0.4s;
+}
+#nav-check {
+    display: none;
+}
+#nav-check:checked ~ #main-nav {
+    transform: translateY(0);
+}
+#nav-check:checked ~ #main {
+    margin-left: 0;
+    width: 100vw;
+}
+
+#main-nav {
+    background-image: linear-gradient(rgb(133, 133, 133), white);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    transform: translateY(-100vh);
+    transition: transform 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main {
+    width: 100vw;
+    padding: 25px;
+    box-sizing: border-box;
+    transition: all 0.3s linear;
+}
+#open-modal-checkbox {
+    display: none;
+}
+#modal {
+    background-color: white;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    display: none;
+}
+
+#open-modal-checkbox:checked ~ #modal,
+#open-modal-checkbox:checked ~ .overlay {
+    display: block;
+}
+
+.modal-header {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modal-header--title {
+    margin: 0;
+}
+.modal-header--top-button {
+    background: transparent;
+    font-weight: 600;
+    top: 10px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+}
+.modal-header--cuadradit {
+    right: 33px;
+}
+.modal-header--close {
+    right: 10px;
+}
+.modal-content {
+    padding: 25px;
+}
+.mobile-hidden {
+    display: none;
+}
+
+.lorem {
+    color: white;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+@media (min-width: 415px) {
+    #modal {
+        background-color: tomato;
+        width: 320px;
+        height: 420px;
+        top: 10vh;
+        left: calc(50vw - 160px);
+    }
+    .modal-content {
+        height: 265px;
+        overflow-y: auto;
+    }
+    .mobile-hidden {
+        display: initial;
+    }
+    .overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+    }
+    #nav-check {
+        display: none;
+    }
+    #nav-check:checked ~ #main-nav {
+        transform: translateX(0);
+    }
+    #nav-check:checked ~ #main {
+        margin-left: 400px;
+        width: calc(100% - 180);
+    }
+    
+    #main-nav {
+        background: white;
+        width: 400px;
+        height: 100vh;
+        transform: translateX(-400px);
+        transition: transform 0.3s linear;
+    }
+    
+    #main {
+        margin-left: 0px;
+        width: 100%;
+        padding: 25px;
+        box-sizing: border-box;
+        transition: all 0.3s linear;
+    }
+}
