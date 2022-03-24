@@ -1,0 +1,176 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul, li {
+  list-style: none;
+  list-style-type: none;
+  padding: 0px; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+#header-logo {
+  height: 70px;
+  display: block; }
+
+:root {
+  --color-body: #1e90ff;
+  --color-main: #ffffff;
+  --color-link: #ffffff;
+  --color-footer: #ffffff; }
+
+@media (min-width: 768px) {
+  body {
+    background-color: #1485b2; }
+  .main-header {
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    height: 100px;
+    padding: 15px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .main-header .main-nav {
+      margin-left: 200px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-family: 'Dosis', cursive;
+      font-size: 20px;
+      text-transform: none; }
+      .main-header .main-nav .main-nav-list {
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        justify-content: space-evenly; }
+        .main-header .main-nav .main-nav-list li ul li {
+          display: none;
+          float: left;
+          position: relative; }
+          .main-header .main-nav .main-nav-list li ul li a {
+            display: block; }
+  #hero {
+    height: calc(100vh - 75px);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; } }

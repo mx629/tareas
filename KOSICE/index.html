@@ -11,20 +11,27 @@
     />
     <meta name="author" content="(c) Fundación Kosice" />
     <title>Museo Kosice</title>
-    <link rel="stylehseet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Bebas+Neue&family=Comfortaa:wght@300;500;700&family=Dosis&family=Jost:wght@200;300;400;900&family=Overlock&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <!--Ver y eliminar las fonts no usadas-->
+    <link rel="stylesheet" href="css/index.css" />
   </head>
 
   <body>
-    <header id="main-header">
+    <header class="main-header">
+      <img
+        id="header-logo"
+        src="assets/img/Logo_Fundacion_Kosice_Horizontal.png"
+      />
       <nav class="main-nav" aria-label="Primary nav">
-        <ul class="main-nav-list-primary">
-          <li>
-            <a href="#">Novedades</a>
-            <!--Buscar, Tags, Obra del día, Frase del día-->
-          </li>
+        <ul class="main-nav-list">
           <li>
             <a href="#">Visitar</a>
-            <ul class="main-nav-list-secondary">
+            <ul>
               <li>
                 <a href="#">Particulares</a>
               </li>
@@ -37,7 +44,7 @@
           <li>
             <a href="#">La Fundación</a>
             <!--Sábana-->
-            <ul class="main-nav-list-secondary">
+            <ul>
               <li>
                 <a href="#">Historia</a>
               </li>
@@ -62,7 +69,7 @@
           <li>
             <a href="#">Gyula Kosice</a>
             <!--Sábana-->
-            <ul class="main-nav-list-secondary">
+            <ul>
               <li>
                 <a href="#">Biografía</a>
               </li>
@@ -83,7 +90,7 @@
           </li>
           <li>
             <a href="#">Educación</a>
-            <ul class="main-nav-list-secondary">
+            <ul>
               <li>
                 <a href="#">Visitas guiadas</a>
               </li>
@@ -97,7 +104,7 @@
           </li>
           <li>
             <a href="#">Recursos</a>
-            <ul class="main-nav-list-secondary">
+            <ul>
               <li>
                 <a href="#">Línea de tiempo interactiva</a>
               </li>
@@ -118,8 +125,15 @@
           <li>
             <a href="#">Contacto</a>
           </li>
+        </ul>
+      </nav>
+      <nav class="main-nav-sub" aria-label="Primary nav">
+        <ul>
           <li>
-            <a href="#">English</a>
+            <button type="button">Aportá</button>
+          </li>
+          <li>
+            <img src />
           </li>
         </ul>
       </nav>
