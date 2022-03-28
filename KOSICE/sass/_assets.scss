@@ -1,4 +1,9 @@
 #header-logo {
-    height: 70px;
+    height: var(--logo-height);
     display: block;
+    padding-bottom: 15px;
+}
+.chevron-down {
+    padding-left: 10px;
+    display: inline;
 }

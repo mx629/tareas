@@ -1,44 +1,170 @@
 :root {
-    --color-body: #1e90ff;
+    --color-body: #1485b2;
+    --color-font-menu: black;
+    --logo-height: 70px;
     --color-main: #ffffff;
     --color-link: #ffffff;
     --color-footer: #ffffff;
-      }
-  
-@media (min-width: 768px) {
-body {
-    background-color: #1485b2;
 }
-.main-header {
-    background-color: white;
-    box-sizing: border-box;
-    display: flex;
-    height: 100px;
-    padding: 15px;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: flex-start;
-    .main-nav {
-        margin-left: 200px;
+@media (min-width: 768px) {
+    body {
+        background-color: gray;
+    }
+    .main-header {
+        background-color: white;
+        box-sizing: border-box;
         display: flex;
+        height: 100px;
+        padding: 0px 25px 0px 25px;
+        width: 100vw;
         justify-content: space-between;
-        width: 100%;
-        font-family: 'Dosis', cursive;
-        font-size: 20px;
-        text-transform: none;
-        .main-nav-list {
+        align-items: flex-end;
+        .main-nav-container {
             display: flex;
-            align-items: baseline;
+            flex-direction: column;
             width: 100%;
-            justify-content: space-evenly;
-            li ul li {
-                display: none;
-                float:left;
-                position: relative;
-                a {
-                    display: block;
+            padding-left: 35px;
+            height: var(--logo-height);
+            justify-content: flex-end;
+            .main-nav {
+                .main-nav-list {
+                    display: flex;
+                    align-items: baseline;
+                    width: 100%;
+                    justify-content: space-between;
+                    font-family: 'Questrial', cursive;
+                    color: var(--color-font-menu);
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    li {
+                        button {
+                            background: none;
+                            border: none;
+                            height:50px;
+                            width: auto;
+                            cursor: pointer;
+                            font-family: 'Questrial', cursive;
+                            color: var(--color-font-menu);
+                            text-transform: uppercase;
+                            font-size: 18px;
+                        }
+                        .main-nav-submenu {
+                            box-sizing: content-box; /*me aparece 1px de border que no se que es*/
+                            display: none;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            padding: 0px;
+                            border-top: lightblue dotted 1px;
+                            border-bottom: #1485b2 solid 5px;
+                            background-color: white;
+                            width: 100vw;
+                            height: 0px;
+                            z-index: 1;
+                            transition: all 3s; /*no anda*/
+                            object-fit:cover;
+                            li {
+                                a{
+                                    color: var(--color-font-menu);
+                                    display: block;
+                                    padding: 10px 0 10px 25px;
+                                }
+                                img{
+                                    float: right /* no funca*/;
+                                    display: none;
+                                    position: absolute;
+                                    top:0px;
+                                    height: 250px;
+                                    padding: 0px 0px 0px 300px;
+                                    z-index: 2;
+                                    object-fit:cover;
+                                }
+                            }
+                            li:hover a{
+                                color: var(--color-body);
+                            }
+                            li:hover img{
+                                display: block;
+                            }
+                            ul{
+                                display: flex;
+                                justify-content: center;
+                                flex-direction: column;
+                            }
+                        }
+                    }
+                    button:hover > a{
+                        color: var(--color-body);
+                    }
+                    button:focus-within > a{
+                        color: var(--color-body);
+                    }
+                    li:hover .main-nav-submenu{
+                        display: flex;
+                        top: 100px;
+                        height: 250px;
+                    }
                 }
             }
+            .main-nav-sub {
+                font-family: 'Bebas Neue', cursive;
+                color: var(--color-body);
+                font-size: 15px;
+                text-transform: none;
+                .main-nav-sub-list {
+                    display: flex;
+                    align-items:center;
+                    width: 100%;
+                    justify-content: flex-end;
+                    li {
+                        padding-left: 20px;
+                        a:hover {
+                            color: black;
+                        }
+                        button {
+                            font-family: 'Bebas Neue', cursive;
+                            font-size: 12px;
+                            padding: 3px 12px;
+                            background-color: var(--color-body);
+                            color:white;
+                            text-align: center;
+                            border: none;
+                            border-radius:20px;
+                        }
+                        button:hover {
+                            background-color: black;
+                        }
+                        a img {
+                            filter: invert(39%) sepia(24%) saturate(2808%) hue-rotate(163deg) brightness(97%) contrast(85%);
+                        }
+                        a:hover img {
+                            filter:none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1640px) {
+    body {
+        background-color: tomato;
+    }
+    .main-header .main-nav-container {
+        padding-left: 300px;
+        .main-nav .main-nav-list li button {
+            width: 160px;
+        }
+    }
+}
+@media (max-width: 1040px) {
+    body {
+        background-color: black;
+    }
+    .main-header .main-nav-container {
+        padding-left: 300px;
+        .main-nav .main-nav-list li button {
+            width: 160px;
         }
     }
 }
@@ -48,4 +174,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-}
+    /*Como alinear bien mainnav con subnav (antes no tenía button)
+    El dropdown no se anima
+    Me queda 1 px de padding
+    Se refresca raro
+    El hover del SUBMENU es rarisimo
+    imagen float right
+    */
