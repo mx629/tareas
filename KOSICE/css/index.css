@@ -173,7 +173,7 @@ table {
         color: var(--color-font-menu);
         text-transform: uppercase;
         font-size: 18px; }
-        .main-header .main-nav-container .main-nav .main-nav-list li button {
+        .main-header .main-nav-container .main-nav .main-nav-list li > button {
           background: none;
           border: none;
           height: 50px;
@@ -204,19 +204,31 @@ table {
             color: var(--color-font-menu);
             display: block;
             padding: 10px 0 10px 25px; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li img {
-            float: right;
+          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li div {
             display: none;
             position: absolute;
             top: 0px;
             height: 250px;
             padding: 0px 0px 0px 300px;
             z-index: 2;
-            object-fit: cover; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li:hover a {
+            object-fit: cover;
+            clear: right; }
+            .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li div img {
+              float: right; }
+          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button {
+            background: none;
+            border: none;
+            height: 35px;
+            width: auto;
+            cursor: pointer;
+            font-family: 'Questrial', cursive;
+            color: var(--color-font-menu);
+            text-transform: uppercase;
+            font-size: 18px; }
+          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button:hover a {
             color: var(--color-body); }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li:hover img {
-            display: block; }
+          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button:hover ~ div {
+            display: inline-block; }
           .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu ul {
             display: flex;
             justify-content: center;

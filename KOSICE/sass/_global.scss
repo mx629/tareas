@@ -37,7 +37,7 @@
                     text-transform: uppercase;
                     font-size: 18px;
                     li {
-                        button {
+                        > button {
                             background: none;
                             border: none;
                             height:50px;
@@ -69,8 +69,7 @@
                                     display: block;
                                     padding: 10px 0 10px 25px;
                                 }
-                                img{
-                                    float: right /* no funca*/;
+                                div{
                                     display: none;
                                     position: absolute;
                                     top:0px;
@@ -78,13 +77,30 @@
                                     padding: 0px 0px 0px 300px;
                                     z-index: 2;
                                     object-fit:cover;
+                                    clear: right;
+                                    img {
+                                        float: right;
+                                    }
                                 }
                             }
-                            li:hover a{
+                            li {
+                                button {
+                                    background: none;
+                                    border: none;
+                                    height:35px;
+                                    width: auto;
+                                    cursor: pointer;
+                                    font-family: 'Questrial', cursive;
+                                    color: var(--color-font-menu);
+                                    text-transform: uppercase;
+                                    font-size: 18px;
+                                }
+                                button:hover a{
                                 color: var(--color-body);
-                            }
-                            li:hover img{
-                                display: block;
+                                }
+                                button:hover ~ div{
+                                display: inline-block;
+                                }
                             }
                             ul{
                                 display: flex;
