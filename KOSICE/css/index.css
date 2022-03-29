@@ -157,90 +157,111 @@ table {
     width: 100vw;
     justify-content: space-between;
     align-items: flex-end; }
+    .main-header #header-logo {
+      height: 50px;
+      display: block;
+      padding-bottom: 15px; }
     .main-header .main-nav-container {
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding-left: 35px;
+      padding-left: 10px;
       height: var(--logo-height);
       justify-content: flex-end; }
       .main-header .main-nav-container .main-nav .main-nav-list {
         display: flex;
         align-items: baseline;
         width: 100%;
-        justify-content: space-between;
+        justify-content: flex-end;
         font-family: 'Questrial', cursive;
         color: var(--color-font-menu);
         text-transform: uppercase;
         font-size: 18px; }
-        .main-header .main-nav-container .main-nav .main-nav-list li > button {
-          background: none;
-          border: none;
-          height: 50px;
-          width: auto;
-          cursor: pointer;
-          font-family: 'Questrial', cursive;
-          color: var(--color-font-menu);
-          text-transform: uppercase;
-          font-size: 18px; }
-        .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu {
-          box-sizing: content-box;
-          /*me aparece 1px de border que no se que es*/
-          display: none;
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          padding: 0px;
-          border-top: lightblue dotted 1px;
-          border-bottom: #1485b2 solid 5px;
-          background-color: white;
-          width: 100vw;
-          height: 0px;
-          z-index: 1;
-          transition: all 3s;
-          /*no anda*/
-          object-fit: cover; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li a {
-            color: var(--color-font-menu);
-            display: block;
-            padding: 10px 0 10px 25px; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li div {
-            display: none;
-            position: absolute;
-            top: 0px;
-            height: 250px;
-            padding: 0px 0px 0px 300px;
-            z-index: 2;
-            object-fit: cover;
-            clear: right; }
-            .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li div img {
-              float: right; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button {
-            background: none;
+        .main-header .main-nav-container .main-nav .main-nav-list > li {
+          padding: 0px 0px 0px 25px;
+          background-color: none; }
+          .main-header .main-nav-container .main-nav .main-nav-list > li > .button-nav {
             border: none;
-            height: 35px;
-            width: auto;
+            background-color: white;
+            height: 40px;
+            width: fit-content;
+            padding: 0px;
             cursor: pointer;
             font-family: 'Questrial', cursive;
             color: var(--color-font-menu);
             text-transform: uppercase;
-            font-size: 18px; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button:hover a {
-            color: var(--color-body); }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu li button:hover ~ div {
-            display: inline-block; }
-          .main-header .main-nav-container .main-nav .main-nav-list li .main-nav-submenu ul {
-            display: flex;
-            justify-content: center;
-            flex-direction: column; }
+            font-size: 16px; }
+          .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu {
+            box-sizing: content-box;
+            /*me aparece 1px de border que no se que es*/
+            display: none;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 0px;
+            border-top: lightblue dotted 1px;
+            border-bottom: #1485b2 solid 5px;
+            background-color: white;
+            width: 100vw;
+            z-index: 1;
+            transform: translateY(0px);
+            transition: all 3s;
+            /*no anda*/
+            object-fit: cover; }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu li a {
+              color: var(--color-font-menu);
+              display: block;
+              padding: 10px 0 10px 25px; }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu li div {
+              display: none;
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              height: 250px;
+              z-index: 2;
+              object-fit: cover; }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu li button {
+              background: none;
+              border: none;
+              height: 35px;
+              width: auto;
+              cursor: pointer;
+              font-family: 'Questrial', cursive;
+              color: var(--color-font-menu);
+              text-transform: uppercase;
+              font-size: 18px; }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu li button:hover a {
+              color: var(--color-body); }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu li button:hover ~ div {
+              display: inline-block; }
+            .main-header .main-nav-container .main-nav .main-nav-list > li .main-nav-submenu ul {
+              display: flex;
+              justify-content: center;
+              flex-direction: column; }
         .main-header .main-nav-container .main-nav .main-nav-list button:hover > a {
           color: var(--color-body); }
         .main-header .main-nav-container .main-nav .main-nav-list button:focus-within > a {
           color: var(--color-body); }
         .main-header .main-nav-container .main-nav .main-nav-list li:hover .main-nav-submenu {
+          /*no funciona con button ~*/
           display: flex;
-          top: 100px;
-          height: 250px; }
+          height: 250px;
+          transform: translateY(100px); }
+        .main-header .main-nav-container .main-nav .main-nav-list > li:after {
+          content: '';
+          display: block;
+          position: relative;
+          width: 100%;
+          height: 0px;
+          top: 0;
+          transform: scaleX(0);
+          background-color: var(--color-body);
+          border: lightblue dotted 1px;
+          transform-origin: bottom middle;
+          transition: transform 0.1s ease-out; }
+        .main-header .main-nav-container .main-nav .main-nav-list > li:hover:after {
+          transform: scaleX(1);
+          transform-origin: bottom middle; }
       .main-header .main-nav-container .main-nav-sub {
         font-family: 'Bebas Neue', cursive;
         color: var(--color-body);
@@ -250,7 +271,8 @@ table {
           display: flex;
           align-items: center;
           width: 100%;
-          justify-content: flex-end; }
+          justify-content: flex-end;
+          padding-bottom: 10px; }
           .main-header .main-nav-container .main-nav-sub .main-nav-sub-list li {
             padding-left: 20px; }
             .main-header .main-nav-container .main-nav-sub .main-nav-sub-list li a:hover {
@@ -271,15 +293,37 @@ table {
             .main-header .main-nav-container .main-nav-sub .main-nav-sub-list li a:hover img {
               filter: none; } }
 
-@media (min-width: 1640px) {
+@media (min-width: 992px) {
+  body {
+    background-color: thistle; }
+  .main-header #header-logo {
+    height: 50px; }
+  .main-header .main-nav-container .main-nav .main-nav-list > li {
+    padding: 0px 0px 0px 25px; }
+    .main-header .main-nav-container .main-nav .main-nav-list > li .button-nav {
+      font-size: 16px; } }
+
+@media (min-width: 1200px) {
+  body {
+    background-color: teal; }
+  .main-header #header-logo {
+    height: 70px; }
+  .main-header .main-nav-container .main-nav .main-nav-list > li {
+    padding: 0px 0px 0px 35px; }
+    .main-header .main-nav-container .main-nav .main-nav-list > li .button-nav {
+      font-size: 17px; } }
+
+@media (min-width: 1400px) {
   body {
     background-color: tomato; }
-  .main-header .main-nav-container {
-    padding-left: 300px; }
-    .main-header .main-nav-container .main-nav .main-nav-list li button {
-      width: 160px; } }
+  .main-header #header-logo {
+    height: 70px; }
+  .main-header .main-nav-container .main-nav .main-nav-list > li {
+    padding: 0px 0px 0px 60px; }
+    .main-header .main-nav-container .main-nav .main-nav-list > li .button-nav {
+      font-size: 18px; } }
 
-@media (max-width: 1040px) {
+@media (max-width: 756px) {
   body {
     background-color: black; }
   .main-header .main-nav-container {
@@ -299,5 +343,5 @@ table {
     Me queda 1 px de padding
     Se refresca raro
     El hover del SUBMENU es rarisimo
-    imagen float right
+    imagen float right sin que me coma texto con mas zoom
     */

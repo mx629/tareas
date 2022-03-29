@@ -11,6 +11,11 @@
         background-color: gray;
     }
     .main-header {
+        #header-logo {
+            height: 50px;
+            display: block;
+            padding-bottom: 15px;
+        }
         background-color: white;
         box-sizing: border-box;
         display: flex;
@@ -23,7 +28,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            padding-left: 35px;
+            padding-left: 10px;
             height: var(--logo-height);
             justify-content: flex-end;
             .main-nav {
@@ -31,22 +36,25 @@
                     display: flex;
                     align-items: baseline;
                     width: 100%;
-                    justify-content: space-between;
+                    justify-content: flex-end;
                     font-family: 'Questrial', cursive;
                     color: var(--color-font-menu);
                     text-transform: uppercase;
                     font-size: 18px;
-                    li {
-                        > button {
-                            background: none;
+                    > li {
+                        padding: 0px 0px 0px 25px;
+                        background-color: none;
+                        > .button-nav {
                             border: none;
-                            height:50px;
-                            width: auto;
+                            background-color:white;
+                            height:40px;
+                            width: fit-content;
+                            padding: 0px;
                             cursor: pointer;
                             font-family: 'Questrial', cursive;
                             color: var(--color-font-menu);
                             text-transform: uppercase;
-                            font-size: 18px;
+                            font-size: 16px;
                         }
                         .main-nav-submenu {
                             box-sizing: content-box; /*me aparece 1px de border que no se que es*/
@@ -59,8 +67,8 @@
                             border-bottom: #1485b2 solid 5px;
                             background-color: white;
                             width: 100vw;
-                            height: 0px;
                             z-index: 1;
+                            transform: translateY(0px);
                             transition: all 3s; /*no anda*/
                             object-fit:cover;
                             li {
@@ -73,14 +81,10 @@
                                     display: none;
                                     position: absolute;
                                     top:0px;
+                                    right: 0px;
                                     height: 250px;
-                                    padding: 0px 0px 0px 300px;
                                     z-index: 2;
                                     object-fit:cover;
-                                    clear: right;
-                                    img {
-                                        float: right;
-                                    }
                                 }
                             }
                             li {
@@ -115,10 +119,27 @@
                     button:focus-within > a{
                         color: var(--color-body);
                     }
-                    li:hover .main-nav-submenu{
+                    li:hover .main-nav-submenu{ /*no funciona con button ~*/
                         display: flex;
-                        top: 100px;
                         height: 250px;
+                        transform: translateY(100px);
+                    }
+                    >li:after {
+                        content: '';
+                        display: block;
+                        position: relative;
+                        width: 100%;
+                        height: 0px;
+                        top: 0;
+                        transform: scaleX(0);
+                        background-color: var(--color-body);
+                        border: lightblue dotted 1px;
+                        transform-origin: bottom middle;
+                        transition: transform 0.1s ease-out;
+                    }
+                    >li:hover:after {
+                        transform: scaleX(1);
+                        transform-origin: bottom middle;
                     }
                 }
             }
@@ -132,6 +153,7 @@
                     align-items:center;
                     width: 100%;
                     justify-content: flex-end;
+                    padding-bottom: 10px;
                     li {
                         padding-left: 20px;
                         a:hover {
@@ -162,18 +184,55 @@
         }
     }
 }
-@media (min-width: 1640px) {
+@media (min-width: 992px) {
     body {
-        background-color: tomato;
+        background-color: thistle;
     }
-    .main-header .main-nav-container {
-        padding-left: 300px;
-        .main-nav .main-nav-list li button {
-            width: 160px;
+    .main-header {
+        #header-logo {
+            height: 50px;
+        }
+        .main-nav-container .main-nav .main-nav-list > li {
+            padding: 0px 0px 0px 25px;
+            .button-nav {
+                font-size: 16px;
+            }
         }
     }
 }
-@media (max-width: 1040px) {
+@media (min-width: 1200px) {
+    body {
+        background-color: teal;
+    }
+    .main-header {
+        #header-logo {
+            height: 70px;
+        }
+        .main-nav-container .main-nav .main-nav-list > li {
+            padding: 0px 0px 0px 35px;
+            .button-nav {
+                font-size: 17px;
+            }
+        }
+    }
+}
+@media (min-width: 1400px) {
+    body {
+        background-color: tomato;
+    }
+    .main-header {
+        #header-logo {
+            height: 70px;
+        }
+        .main-nav-container .main-nav .main-nav-list > li {
+            padding: 0px 0px 0px 60px;
+            .button-nav {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 756px) {
     body {
         background-color: black;
     }
@@ -195,5 +254,5 @@
     Me queda 1 px de padding
     Se refresca raro
     El hover del SUBMENU es rarisimo
-    imagen float right
+    imagen float right sin que me coma texto con mas zoom
     */
